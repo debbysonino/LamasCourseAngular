@@ -25,8 +25,8 @@ export class UserAdminComponent implements OnInit {
   onUserSelected(user:UserModel){
     this.selectedUser=user;
   }
-//   saveUserDetails(username:string,email:string){
-//     this.currentUser.username=username;
-//     this.currentUser.email=email;
-// }
+  saveUserDetails(id:number,username:string,email:string,firstName:string,lastName: string,jobTitle: string,avatar:string, phoneNumber:string){
+   let userNew= new UserModel(id,username,email,new UserInfo(firstName,lastName,jobTitle,avatar,phoneNumber));
+   this.users.push(userNew)  
+}
 }

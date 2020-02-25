@@ -1,4 +1,5 @@
 <div class="user-item">
+  <ng-container *ngIf="users && users.length>0;else noData">
   <table>
     <thead>
         <th>Name</th>
@@ -6,22 +7,36 @@
         <th>Email</th>
     </thead>
     <tbody>
-      <!-- <tr *ngFor="let myUser of users"  (click)="onUserSelected(myUser)">
+      
+      <tr *ngFor="let myUser of users"  (click)="onUserSelected(myUser)" [ngClass]="{selected:selectedUser?.id===myUser.id}">
         <td>{{myUser.username}}</td>
         <td>{{myUser.id}}</td>
         <td>{{myUser.email}}</td>
-       </tr> -->
+       </tr>
+      
     </tbody>
   </table>
+</ng-container>
+<ng-template #noData>
+  There is no data
+</ng-template>
 </div>
 <!-- <div >
   
 </div> -->
  <div class="user-item">
-  <input type="text" #userIdNew placeholder="Enter User ID" ><br>
+  <input type="text" #userIdNew placeholder="Enter User ID"><br>
   <input type="text" #userNameNew placeholder="Enter User Name" ><br>
   <input type="text" #userEmailNew placeholder="Enter email"><br>
-    <div>
+<Hr>
+  <input type="text" #newfirstName  placeholder="first Name"><br><input type="text" #newlastName placeholder="lastName"><br>
+  <input type="text" #newjobTitle  placeholder="job Title"><br><input type="text" #newavatar placeholder="avatar"> <br>
+  <input type="text" #newphoneNumber placeholder="phone Number">
+  <button (click)="saveUserDetails(userIdNew.value,userNameNew.value,userEmailNew.value,newfirstName.value,newlastName.value,newjobTitle.value,newavatar.value,newphoneNumber.value)"> Save New User</button>
+</div> 
+<div *ngIf="selectedUser">
+
+  <div>
       Id:{{selectedUser?.id}}
     </div>
     <div>

@@ -2,7 +2,7 @@
   background-color: lightblue;
   border: 1px solid black;
 }
-.users-item{
-  background-color: lightblue;
+.selected{
+  background-color: red;
   border: 1px solid black;
 }
