@@ -1,0 +1,33 @@
+<div  >
+    <div class="wrap-table100">
+      <div>  
+      <table class="table100">
+        <thead>
+            <th class="table100.ver1 th">Name</th>
+            <th class="table100.ver1 th">ID</th>
+            <th class="table100.ver1 th">Email</th>
+            <th class="table100.ver1 th">First Name</th>
+            <th class="table100.ver1 th">Last Name</th>
+            <th class="table100.ver1 th">Phone Number</th>
+            <th class="table100.ver1 th">Job Title</th>
+            <th class="table100.ver1 th">Avatar</th>
+        </thead>
+        <tbody>
+          
+          <tr *ngFor="let myUser of usersList"  class="row100 body" (click)="onSelectUser(myUser)" [ngClass]="{selected:currentSelected?.id===myUser.id}">
+            <!-- [ngClass]="{selected:selectedUser?.id===myUser.id}" -->
+            <td class="table100-body tr">{{myUser.username}}</td>
+            <td class="table100-body tr">{{myUser.id}}</td>
+            <td class="table100-body tr">{{myUser.email}}</td>
+            <td class="table100-body tr">{{myUser.info.firstName}}</td>
+            <td class="table100-body tr">{{myUser.info.lastName}}</td>
+            <td class="table100-body tr">{{myUser.info.phoneNumber}}</td>
+            <td class="table100-body tr">{{myUser.info.jobTitle}}</td>
+            <td class="table100-body tr">{{myUser.info.avatar}}</td>
+           </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>

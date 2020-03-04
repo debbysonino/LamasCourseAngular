@@ -1,0 +1,19 @@
+<div class="user-item">
+    Id: {{currentUser.id}}<br>
+    username: <input type="text" #userNameNew [value]="currentUser.username"><br>
+    email:<input type="text" #userEmailNew [value]="currentUser.email"><br>
+    <Hr>
+    firstName: <input type="text" #newfirstName [value]="currentUser.info.firstName"><br>
+    <input type="text" #newlastName [value]="currentUser.info.lastName"><br>
+    <input type="text" #newjobTitle [value]="currentUser.info.jobTitle"><br>
+    <input type="text" #newavatar [value]="currentUser.info.avatar"> <br>
+    <button
+    (click)="saveAvatar(newavatar.value)">
+    Save Avatar</button><br>
+    <input type="text" #newphoneNumber [value]="currentUser.info.phoneNumber">
+    <br>
+    <button
+        (click)="saveUserDetails(currentUser.id,userNameNew.value,userEmailNew.value,newfirstName.value,newlastName.value,newjobTitle.value,newavatar.value,newphoneNumber.value)">
+        Save  User Details </button>
+        
+</div>

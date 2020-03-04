@@ -29,4 +29,7 @@ export class UserAdminComponent implements OnInit {
    let userNew= new UserModel(id,username,email,new UserInfo(firstName,lastName,jobTitle,avatar,phoneNumber));
    this.users.push(userNew)  
 }
+saveAvatar(avatar:string){
+  this.selectedUser.info.avatar=avatar;
+}
 }

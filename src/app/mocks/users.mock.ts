@@ -7,9 +7,9 @@ export const USERS : UserModel[]=[
         "info":
         {
         "avatar":"avatar",
-        "firstName":"firstName",
+        "firstName":"Debby",
         "jobTitle":"jobTitle",
-        "lastName":"lastName",
+        "lastName":"Sonno",
         "phoneNumber":"73473827"}  
     },
     {   "id":13,
